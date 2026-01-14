@@ -96,7 +96,7 @@ export default function HeroSection() {
           <div className="p-4">
             <div className="relative w-full h-[320px] rounded-[24px] overflow-hidden">
               <Image
-                src="/images/hero1.png"
+                src="/images/Hero1.png"
                 alt="Hero"
                 fill
                 className="object-cover"
@@ -158,7 +158,7 @@ export default function HeroSection() {
             <div className="flex items-center justify-end mt-16">
               <div className="relative w-[520px] h-[600px] rounded-[32px] overflow-hidden shadow-xl">
                 <Image
-                  src="/images/hero1.png"
+                  src="/images/Hero1.png"
                   alt="Hero"
                   fill
                   className="object-cover"
