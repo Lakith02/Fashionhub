@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Tangerine Shirt",
+    "price": "$240.32",
+    "image": "/images/istockphoto-1018293976-612x612.jpg",
+    "category": "Men",
+    "colors": ["#D4A373", "#1B2B48", "#CBD5E1"],
+    "sizes": ["S", "M", "L", "XL", "XXL"]
+  },
+  {
+    "id": "2",
+    "name": "Leather Coat",
+    "price": "$325.36",
+    "image": "/images/l2.jpg",
+    "category": "Women",
+    "colors": ["#1B2B48", "#D4A373", "#8B4513"],
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": "3",
+    "name": "Tangerine Shirt",
+    "price": "$126.47",
+    "image": "/images/young-black-woman-cream-suit-260nw-2491218847.webp",
+    "category": "Women",
+    "colors": ["#D4A373", "#FFFFFF", "#000000"],
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "id": "4",
+    "name": "Leather Coat",
+    "price": "$257.85",
+    "image": "/images/istockphoto-2183219028-612x612.jpg",
+    "category": "Men",
+    "colors": ["#1B2B48", "#8B4513", "#2F4F4F"],
+    "sizes": ["M", "L", "XL", "XXL"]
+  }
+]
