@@ -10,19 +10,16 @@ interface Product {
   sizes: string[];
 }
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    // Extract the product ID from the URL
-    const url = new URL(request.url);
-    const pathParts = url.pathname.split('/');
-    const productId = pathParts[pathParts.length - 1]; // Get the last part of the path
-    
+    const { id } = await params;
+    // Use the extracted product ID from params
     // Fetch products from the public JSON file
-    const response = await fetch(`${url.origin}/products.json`);
+    const response = await fetch(`${request.nextUrl.origin}/products.json`);
     const productsData: Product[] = await response.json();
     
     // Find the specific product
-    const product = productsData.find(p => p.id === productId);
+    const product = productsData.find(p => p.id === id);
     
     if (!product) {
       return Response.json({ error: 'Product not found' }, { status: 404 });
