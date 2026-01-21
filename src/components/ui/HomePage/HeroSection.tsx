@@ -63,10 +63,24 @@ export default function HeroSection() {
               </Link>
             </div>
             <div className="mt-auto px-8 pb-10">
-              <button className="w-full bg-[#FF7A00] text-white py-4 rounded-full font-medium mb-4">
+              <button 
+                className="w-full bg-[#FF7A00] text-white py-4 rounded-full font-medium mb-4"
+                onClick={() => {
+                  // Navigate to explore page
+                  window.location.href = '/explore';
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Order Now
               </button>
-              <button className="w-full bg-black text-white py-4 rounded-full font-medium">
+              <button 
+                className="w-full bg-black text-white py-4 rounded-full font-medium"
+                onClick={() => {
+                  // Handle Contact Us functionality
+                  window.location.href = 'mailto:contact@fashionhub.com';
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Contact Us
               </button>
             </div>
@@ -80,10 +94,22 @@ export default function HeroSection() {
           <Link href="/cart" className="text-black font-medium hover:opacity-70">Cart</Link>
         </div>
         <div className="hidden md:flex items-center gap-4">
-          <button className="bg-[#FF7A00] text-white px-6 py-3 rounded-full font-medium hover:bg-[#FF8A1A] transition">
+          <button 
+            className="bg-[#FF7A00] text-white px-6 py-3 rounded-full font-medium hover:bg-[#FF8A1A] transition"
+            onClick={() => {
+              // Navigate to explore page
+              window.location.href = '/explore';
+            }}
+          >
             Order Now
           </button>
-          <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition">
+          <button 
+            className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition"
+            onClick={() => {
+              // Handle Contact Us functionality
+              window.location.href = 'mailto:contact@fashionhub.com';
+            }}
+          >
             Contact Us
           </button>
         </div>
@@ -117,11 +143,23 @@ export default function HeroSection() {
 
             {/* Buttons */}
             <div className="flex gap-4 mt-6">
-              <button className="flex-1 border border-gray-300 rounded-full py-3 text-[14px] font-medium text-black">
+              <button 
+                className="flex-1 border border-gray-300 rounded-full py-3 text-[14px] font-medium text-black"
+                onClick={() => {
+                  // Navigate to signup page
+                  window.location.href = '/signup';
+                }}
+              >
                 Sign Up
               </button>
-
-              <button className="flex-1 bg-[#FF7A00] text-white rounded-full py-3 text-[14px] font-medium">
+                          
+              <button 
+                className="flex-1 bg-[#FF7A00] text-white rounded-full py-3 text-[14px] font-medium"
+                onClick={() => {
+                  // Navigate to signin page
+                  window.location.href = '/signin';
+                }}
+              >
                 Sign In
               </button>
             </div>
@@ -144,11 +182,23 @@ export default function HeroSection() {
               </p>
 
               <div className="flex gap-6 mt-10">
-                <button className="border-2 border-gray-300 text-black rounded-full py-4 px-10 text-base font-medium hover:bg-gray-100 transition">
+                <button 
+                  className="border-2 border-gray-300 text-black rounded-full py-4 px-10 text-base font-medium hover:bg-gray-100 transition"
+                  onClick={() => {
+                    // Navigate to signup page
+                    window.location.href = '/signup';
+                  }}
+                >
                   Sign Up
                 </button>
-
-                <button className="bg-[#FF7A00] text-white rounded-full py-4 px-10 text-base font-medium hover:bg-[#FF8A1A] transition">
+                              
+                <button 
+                  className="bg-[#FF7A00] text-white rounded-full py-4 px-10 text-base font-medium hover:bg-[#FF8A1A] transition"
+                  onClick={() => {
+                    // Navigate to signin page
+                    window.location.href = '/signin';
+                  }}
+                >
                   Sign In
                 </button>
               </div>

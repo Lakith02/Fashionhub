@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Fetch Test</title>
+</head>
+<body>
+    <h1>API Test</h1>
+    <button onclick="testSignup()">Test Signup</button>
+    <button onclick="testSignin()">Test Signin</button>
+    <div id="result"></div>
+
+    <script>
+        async function testSignup() {
+            document.getElementById('result').innerHTML = 'Testing signup...';
+            
+            try {
+                const response = await fetch('/api/auth/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        firstName: 'HTML',
+                        lastName: 'Test',
+                        email: 'html@test.com',
+                        password: 'password123'
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    document.getElementById('result').innerHTML = `SUCCESS: ${JSON.stringify(data)}`;
+                } else {
+                    document.getElementById('result').innerHTML = `ERROR: ${response.status} - ${JSON.stringify(data)}`;
+                }
+            } catch (error) {
+                document.getElementById('result').innerHTML = `FETCH ERROR: ${error.message}`;
+            }
+        }
+
+        async function testSignin() {
+            document.getElementById('result').innerHTML = 'Testing signin...';
+            
+            try {
+                const response = await fetch('/api/auth/signin', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: 'html@test.com',
+                        password: 'password123',
+                        rememberMe: false
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    document.getElementById('result').innerHTML = `SIGNIN SUCCESS: ${JSON.stringify(data)}`;
+                } else {
+                    document.getElementById('result').innerHTML = `SIGNIN ERROR: ${response.status} - ${JSON.stringify(data)}`;
+                }
+            } catch (error) {
+                document.getElementById('result').innerHTML = `SIGNIN FETCH ERROR: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
